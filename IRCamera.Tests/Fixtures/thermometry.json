@@ -1,0 +1,38 @@
+{
+  "Description": "Synthetic calibration, telemetry, and expected temperatures for regression testing.",
+  "CalibrationWords": {
+    "0x0": 1028,
+    "0x4": 14336,
+    "0x8": 87,
+    "0x50": -10240,
+    "0x64": 46080,
+    "0x7c": 1250,
+    "0x270": 1250,
+    "0x464": 1250,
+    "0x698": 25600000,
+    "0x69c": 24576000,
+    "0x6a0": 256000,
+    "0x6a4": 256,
+    "0xd20": 1048576,
+    "0x2b10": 1,
+    "0x2b18": 1000,
+    "0x2bc0": 1000,
+    "0x2bd0": -1000
+  },
+  "TelemetryWords": { "1": 1250, "5": 1, "27": 1250 },
+  "RawSamples": [1500, 1600, 2000, 2500],
+  "Cases": [
+    {
+      "Emissivity": 1.0, "Distance": 1.0, "Ambient": 20.0, "Reflected": 20.0, "Humidity": 0.6,
+      "Expected": [10.01849365234375, 19.7144775390625, 51.041015625, 81.30670166015625]
+    },
+    {
+      "Emissivity": 0.97, "Distance": 1.0, "Ambient": 20.0, "Reflected": 20.0, "Humidity": 0.6,
+      "Expected": [9.6925048828125, 19.70562744140625, 51.86859130859375, 82.75619506835938]
+    },
+    {
+      "Emissivity": 0.8, "Distance": 2.0, "Ambient": 10.0, "Reflected": 25.0, "Humidity": 0.2,
+      "Expected": [5.461151123046875, 17.98431396484375, 56.4097900390625, 91.702392578125]
+    }
+  ]
+}

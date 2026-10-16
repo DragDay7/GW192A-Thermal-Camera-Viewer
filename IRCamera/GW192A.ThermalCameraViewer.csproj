@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>GW192A.ThermalCameraViewer</AssemblyName>
+    <RootNamespace>IRCamera</RootNamespace>
+    <Product>GW192A Thermal Camera Viewer</Product>
+    <Title>GW192A Thermal Camera Viewer</Title>
+    <Description>Windows thermal camera viewer for GW192A with calibrated temperatures and min/max tracking.</Description>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <PublishTrimmed>false</PublishTrimmed>
+    <DebugType Condition="'$(Configuration)' == 'Release'">none</DebugType>
+    <DebugSymbols Condition="'$(Configuration)' == 'Release'">false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DirectShowLib.Standard" Version="2.1.0" GeneratePathProperty="true" />
+    <PackageReference Include="XbrzSharp" Version="1.1.0" />
+    <InternalsVisibleTo Include="GW192A.ThermalCameraViewer.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="../third-party/XbrzSharp-LICENSE.txt" Link="XbrzSharp-LICENSE.txt" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="$(PkgDirectShowLib_Standard)/LICENSE" Link="DirectShowLib-LICENSE.txt" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../THIRD-PARTY-NOTICES.md" Link="THIRD-PARTY-NOTICES.md" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
