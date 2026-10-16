@@ -2,6 +2,8 @@
 
 A lightweight Windows viewer for the GW192A USB thermal camera.
 
+<img src="artifacts/screenshot.png" alt="GW192A Thermal Camera Viewer showing live thermal imagery and temperature readings" width="640">
+
 ## Requirements
 
 - Windows x64

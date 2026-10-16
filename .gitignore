@@ -1,4 +1,5 @@
 .idea/
-artifacts/
+artifacts/*
+!artifacts/screenshot.png
 **/bin/
 **/obj/
